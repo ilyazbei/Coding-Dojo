@@ -1,0 +1,127 @@
+*{
+  outline: 0px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  /*outline: 1px dotted red;*/
+  /*display: inline-block;*/
+}
+#wrapper {
+  width: 970px;
+  background: radial-gradient(rgb(112, 85, 97), rgb(89, 83, 114), rgb(41, 32, 43));
+  margin: 0px auto;
+}
+.header{
+  background: linear-gradient(rgb(235, 237, 234), rgb(255, 255, 255), rgb(235, 237, 234));
+  /*display: inline-block;*/
+  width: 970px;
+}
+.header img{
+  margin-left: 10px;
+  vertical-align: top;
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+}
+.header h2{
+  margin-left: 200px;
+  margin-top: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+.NavBar ul li{
+  padding:10px 35px;
+  list-style-type: none;
+  display: inline-block;
+  border-right: 1px solid black;
+}
+.NavBar {
+  border: 1px solid black;
+}
+.mainBlock{
+  width: 930px;
+  display: inline-block;
+  padding: 14px 25px 14px 14px;
+  display: inline-block;
+}
+.DbaseJPG{
+  background-color: rgb(192, 192, 192);
+  width: 480px;
+  height: 280px;
+  padding: 8px;
+  display: inline-block;
+}
+.DbaseJPG img{
+  width: 480px;
+  height: 280px;
+}
+.WhatData{
+  background: linear-gradient(to right, rgb(242, 251, 254) , rgb(222, 211, 222));
+  margin-left: 15px;
+  vertical-align: top;
+  height: 296px;
+  width: 405px;
+  display: inline-block;
+}
+.WhatData h4{
+  background: linear-gradient(rgb(171, 167, 178), rgb(128, 126, 137), rgb(171, 167, 178));
+}
+.WhatData h4 span{
+  margin-left: 10px;
+}
+.WhatData h5{
+  padding: 10px;
+}
+.WhatData p{
+  margin-left: 10px;
+}
+#AStackIcon {
+  margin-left: 790px;
+  text-decoration: none;
+  display: inline-block;
+  display: inline-block;
+}
+#AStackIcon a img{
+  height: 15px;
+  display: inline-block;
+}
+#AStackIcon a h6{
+  vertical-align: top;
+  display: inline-block;
+}
+.theBot{
+  vertical-align: top;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  display: inline-block;
+  background: linear-gradient(rgb(155, 169, 193), rgb(249, 249, 255));
+  width: 215px;
+  height: 500px;
+}
+.theBot img{
+  display: inline-block;
+  width: 215px;
+  height: 100px;
+}
+.theBot p{
+  height: 310px;
+  margin: 5px;
+}
+.Storage {
+  background: linear-gradient(white, grey, white);
+  width: 215px;
+  height: 30px;
+}
+.Storage h4{
+  padding: 5px;
+}
+button{
+  color: white;
+  display: inline-block;
+  background-color: rgb(93, 114, 154);
+  padding: 3px 6px;
+  margin-left: 100px;
+  height: 26px;
+  border-radius: 6px;
+  border: 4px solid black;
+}

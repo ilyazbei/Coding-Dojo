@@ -1,0 +1,49 @@
+/*CSS reset settings here*/
+div {
+  border-radius: 16px;
+}
+
+#wrapper{
+ width: 970px;
+ background-color: rgb(58, 71, 148);
+ margin: 0px auto;
+ padding: 20px;
+}
+#header{
+ color: white;
+ height: 100px;
+ background-color: red;
+ margin-bottom: 20px;
+ padding: 20px;
+
+}
+#navigation{
+ font-size: 18px;
+ color: rgb(125, 246, 205);
+ height: 300px;
+ width: 200px;
+ background-color: teal;
+ display: inline-block;
+ vertical-align: top;
+}
+#navigation h4{
+  margin-left: 18px;
+}
+#main_content{
+
+ color: white;
+ height: 600px;
+ width: 705px;
+ background-color: black;
+ display: inline-block;
+ margin-left: 20px;
+ padding: 20px;
+
+}
+#advertisement{
+ height: 60px;
+ background-color: gray;
+ margin-top: 20px;
+ padding: 20px;
+
+}

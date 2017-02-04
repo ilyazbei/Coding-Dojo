@@ -1,0 +1,230 @@
+*{
+  outline: 0px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  /*outline: 1px dotted blue;*/
+  font-family: calibri;
+}
+#wrapper{
+  margin: 0px auto;
+  width: 970px;
+}
+#wrapper img{
+  margin-bottom: -45px;
+  display: inline-block;
+  width: 14%;
+}
+#wrapper h1{
+  font-size: 1.5em;
+  font-weight:normal;
+  color: rgb(71, 71, 71);
+  font-size: 65px;
+  display: inline-block;
+}
+#wrapper h1 span{
+  color: rgb(73, 131, 177);
+}
+#wrapper p{
+  padding: 8px 20px 10px 20px;
+  background: linear-gradient(rgb(84, 132, 171), rgb(108, 150, 183), rgb(84, 132, 171));
+  color: white;
+  font-family: calibri;
+  font-size: 48px;
+}
+#mainBody{
+  background: linear-gradient(rgb(239, 239, 239), rgb(255, 255, 255));
+}
+#leftB{
+  display: inline-block;
+  width: 280px;
+  padding: 30px 0px 10px 10px;
+}
+#leftB h2{
+  font-size: 20px;
+}
+#leftB h2 span{
+  color: red;
+}
+#leftB h3{
+  font-size: 18px;
+  padding: 15px 0px 20px 0px;
+}
+#leftB h3 span{
+  color: rgb(73, 131, 177);
+}
+#staf{
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid grey;
+}
+#staf a{
+  margin-left: 5px;
+  padding: 10px 35px 12px 35px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  background-color: rgb(82, 138, 182);
+  box-shadow: 5px 5px rgb(130, 130, 130);
+}
+#staf span a{
+  padding: 10px 20.5px 12px 20.5px;
+  display: inline-block;
+  border-radius: 8px;
+  background-color: rgb(232, 128, 25);
+  margin-left: 5px;
+  margin-top: 22px;
+  box-shadow: 5px 5px rgb(130, 130, 130);
+}
+#ninja{
+  background-image: url("images/ad_background.png");
+  background-repeat:no-repeat;
+  background-size: 570px;
+  height: 380px;
+  width: 280px;
+}
+#ninja p{
+  text-align: center;
+  padding: 16px 20px 0px 20px;
+  background: none;
+  font-size: 32px;
+}
+#ninja img{
+  margin-top: -10px;
+  margin-left: 75px;
+  width: 45%;
+  margin-bottom: 0px;
+}
+#ninja button{
+  padding: 6px 50px 8px 48px;
+  font-size: 22px;
+  border-radius: 8px;
+  background-color: rgb(23, 195, 221);
+  margin: 6px 20px 20px 20px;
+  box-shadow: 2px 2px rgb(39, 43, 48);
+}
+#ninja button a{
+  color: white;
+  text-decoration: none;
+}
+#rightB{
+  padding-left: 50px;
+  display: inline-block;
+  vertical-align: top;
+  width: 620px;
+}
+#rightB img{
+  padding-top: 8px;
+  vertical-align: top;
+  width: 5%;
+}
+#rightB a{
+  padding-top: 6px;
+  display: inline-block;
+  background: none;
+  font-size: 24px;
+  text-decoration: none;
+  color: rgb(73, 131, 177);
+}
+#rightB p{
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  background: none;
+  font-size: 12px;
+  color: black;
+  padding: 0px 0px 0px 384px;
+}
+#rightB span img{
+  width: 10%;
+  margin-left: 355px;
+  margin-top: -30px;
+}
+#rightB h1{
+  margin-top: -40px;
+  margin-left: 428px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 32px;
+  font-weight: 900;
+  color: rgb(0, 192, 221);
+}
+#rightB span p{
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  background: none;
+  font-size: 10px;
+  color: black;
+  padding: 0px 0px 25px 487px;
+  margin-top: -20px;
+  border-bottom: 1px solid grey;
+}
+#Clients h2{
+  color: rgb(73, 131, 177);
+}
+#Clients h3{
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+}
+#Clients span{
+  color: rgb(0, 192, 221);
+}
+#Clients h4{
+  margin-left: 3px;
+  display: inline-block;
+  font-size: 16px;
+}
+#Clients ul li{
+  margin-left: 45px;
+  font-size: 16px;
+}
+#soWhat img{
+  margin-left: 180px;
+  margin-top: 20px;
+  width: 45%;
+}
+#soWhat h2{
+  margin-top: 60px;
+  color: rgb(73, 131, 177);
+}
+#soWhat ol li{
+
+  margin-left: 45px;
+  font-size: 16px;
+}
+#soWhat span{
+  color: rgb(0, 192, 221);
+}
+#theEnd{
+  margin-top: 10px;
+  height: 150px;
+  border-top: 5px solid rgb(0, 133, 224);
+  border-left: 5px solid rgb(0, 133, 224);
+  border-right: 5px solid rgb(0, 133, 224);
+}
+#theEnd img{
+  width: 24%;
+}
+#theEnd h2{
+  padding-left: 6px;
+  display: inline-block;
+  margin-top: 5px;
+  color: rgb(73, 131, 177);
+}
+#theEnd p{
+  margin-top: -50px;
+  padding-bottom: 10px;
+  padding-left: 153px;
+  font-size: 16px;
+}
+#theEnd h6{
+  margin-top: -5px;
+  padding-left: 153px;
+  font-size: 16px;
+  font-weight: 400;
+}
+#theEnd h6 span{
+  color: rgb(0, 192, 221);

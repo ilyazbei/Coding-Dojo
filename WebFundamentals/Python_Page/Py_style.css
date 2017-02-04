@@ -1,0 +1,242 @@
+
+*{
+  /*outline: 1px dotted red;*/
+  padding: 0px;
+  margin: 0px;
+}
+
+#wrapper{
+  width: 970px;
+  background-color: rgb(38,81,117);
+  margin: 0px auto;
+  /*padding: 20px;*/
+  height: auto;
+}
+.rightHeader{
+  color: white;
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 225px;
+
+}
+.rightHeader span{
+  color: black;
+}
+.rightHeader p{
+  margin-left: 130px;
+}
+.rightHeader a{
+  color: yellow;
+}
+.header{
+  width: 970px;
+  display: inline-block;
+}
+.logo{
+  display: inline-block;
+  height: 96px;
+
+}
+.searchHeader{
+  /*margin-top: 10px;*/
+  text-align: center;
+  display: inline-block;
+  box-shadow: black;
+  border-radius: 14px;
+  background-color: rgb(68, 68, 68);
+  width: 290px;
+  height: 40px;
+  padding: 20px;  margin: 20px;
+  box-shadow: 5px 5px 4px #0a090a;
+  padding-left: 35px;
+}
+.searchHeader #search{
+  vertical-align: top;
+  display: inline-block;
+  width: 180px;
+  height: 35px;
+  padding: 20px;
+  box-shadow: 5px 5px 4px #0a090a;
+}
+.goBtn {
+  display: inline-block;
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 4px #0a090a;
+  -moz-box-shadow: 5px 5px 4px #0a090a;
+  box-shadow: 5px 5px 4px #0a090a;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px;
+  background: rgb(38,81,117);
+  border: solid #eff4f7 2px;
+  text-decoration: none;
+  width: 30px;
+  height: 15px;
+  margin-left: 22px;
+}
+
+.toolBar{
+  color: white;
+  word-spacing: 26px;
+  font-size: 28px;
+  text-align: center;
+  padding: 20px;
+  display: inline-block;
+  height: 40px;
+  width: 840px;
+  background-color: rgb(68, 124, 171);
+  border-radius: 14px;
+  box-shadow: 5px 5px 4px #0a090a;
+  margin-left: 60px;
+}
+p{
+  display: inline;
+}
+.midLeftlink li:before{
+    content: "\00BB";
+    color: #f0ca46 ;
+    list-style-type: none;
+}
+ul{
+  list-style-type: none;
+}
+.middle{
+  margin-top: 30px;
+  margin-left: 35px;
+  height: 400px;
+  width: 900px;
+}
+.midLeftlink{
+  line-height: 200%;
+  text-align: center;
+  font-size: 22px;
+  height: 300px;
+  width: 250px;
+  display: inline-block;
+}
+
+.midLeftlink a{
+  color: white;
+
+}
+.midRightlink{
+  margin-left: 90px;
+  vertical-align: top;
+  text-align: center;
+  height: 300px;
+  width: 500px;
+  display: inline-block;
+}
+.midRightlink p{
+  color: white;
+
+}
+.midRightlink ul span{
+  font-size: 22px;
+  font-style: italic;
+  line-height: 200%;
+  color: yellow;
+  list-style: none;
+}
+#white {
+  color: white;
+  font-size: 22px;
+  line-height: 200%;
+}
+.subContent{
+  background-color: white;
+  height: auto;
+  width: 970px;
+  margin: 0px;
+  display: inline-block;
+}
+.topBlueContent1{
+  display: inline-block;
+  border-top: 6px solid rgb(196, 217, 236);
+  margin-top: 12px;
+  margin-left: 60px;
+  width: 400px;
+}
+.topBlueContent2{
+  display: inline-block;
+  border-top: 6px solid rgb(196, 217, 236);
+  margin-top: 12px;
+  margin-left: 30px;
+  width: 400px;
+}
+.LeftsubContent{
+  vertical-align: top;
+  display: inline-block;
+  width: 480px;
+  text-align: center;
+}
+/*.LeftsubContent h3{
+  padding-top: 5px;
+  display: inline-block;
+}*/
+.LeftsubContent p{
+  display: inline-block;
+  width: 390px;
+  margin: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.LeftsubContent ul li{
+  margin-left: 100px;
+  width: 240px;
+  padding: 0px;
+  list-style: square;
+}
+.LeftsubContent ul li a{
+  text-decoration: none;
+}
+.RightsubContent ul li a{
+  text-decoration: none;
+}
+.RightsubContent{
+  margin-bottom: 15px;
+  display: inline-block;
+  width: 480px;
+  text-align: center;
+}
+.RightsubContent p{
+  display: inline-block;
+  width: 390px;
+  margin: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-decoration: none;
+
+}
+.RightsubContent ul li{
+  margin-left: 100px;
+  width: 240px;
+  padding: 0px;
+  list-style: square;
+}
+#PyPI{
+  text-decoration: none;
+}
+.Bot{
+  padding: 20px;
+  text-align: center;
+  color: rgb(196, 217, 236);
+}
+.Bot ul li{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: rgb(196, 217, 236);
+  display: inline-block;
+}
+.Bot ul li a{
+  color: rgb(196, 217, 236);
+  text-decoration: none;
+}
+#botSpacer{
+  margin-left: 40px;
+  margin-right: 40px;
+}
