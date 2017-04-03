@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Delete Email</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'validateApp/css/styles.css' %}">
+  </head>
+  <body>
+    <div class="delete">
+      <h4>Are you sure you want to delete the folowing Email?</h4>
+      <p>Email: {{ email }}</p>
+      <form class="" action="/deleteUser" method="post">
+        {% csrf_token %}
+        <input type="submit" name="Button" value="No">
+        <input class="YES" type="submit" name="Button" value="Yes! I want to delete this">
+        <input type="hidden" name="user_id" value="{{ user_id }}">
+      </form>
+    </div>
+
+  </body>
+</html>

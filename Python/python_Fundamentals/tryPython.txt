@@ -1,0 +1,85 @@
+Last login: Mon Feb  6 13:20:41 on ttys000
+Ilyazs-MBP:~ ilyaz$ cd codingDojo/Python/Python\ Fundamentals/
+Ilyazs-MBP:Python Fundamentals ilyaz$ touch try_Python!.py
+-bash: !.py: event not found
+Ilyazs-MBP:Python Fundamentals ilyaz$ touch try_Python.py
+Ilyazs-MBP:Python Fundamentals ilyaz$ python try_Python.py 
+Ilyazs-MBP:Python Fundamentals ilyaz$ python try_Python.py 
+Ilyazs-MBP:Python Fundamentals ilyaz$ python
+Python 2.7.13 (default, Dec 18 2016, 07:03:39) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> try_Python.py
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'try_Python' is not defined
+>>> my_string
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'my_string' is not defined
+>>> my_string = 'Trying out Python;
+  File "<stdin>", line 1
+    my_string = 'Trying out Python;
+                                  ^
+SyntaxError: EOL while scanning string literal
+>>> my_string = 'Trying out Python'
+>>> my_string
+'Trying out Python'
+>>> my_string = 'This could be changed any time'
+>>> my string 
+  File "<stdin>", line 1
+    my string 
+            ^
+SyntaxError: invalid syntax
+>>> my string
+  File "<stdin>", line 1
+    my string
+            ^
+SyntaxError: invalid syntax
+>>> my_string
+'This could be changed any time'
+>>> 4=5
+  File "<stdin>", line 1
+SyntaxError: can't assign to literal
+>>> 4=4
+  File "<stdin>", line 1
+SyntaxError: can't assign to literal
+>>> 4+4
+8
+>>> 4*4.2
+16.8
+>>> print 4*4
+16
+>>> 4*4
+16
+>>> ls
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ls' is not defined
+>>> a = 'Hello'
+>>> b = 'World'
+>>> a+b
+'HelloWorld'
+>>> a = 'Favorit num is:'
+>>> b = 5
+>>> a+b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> a.append(b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'append'
+>>> "asd" + str(9)
+'asd9'
+>>> a+ str(b)
+'Favorit num is:5'
+>>> a%d + str(b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'd' is not defined
+>>> str(a) + b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> 

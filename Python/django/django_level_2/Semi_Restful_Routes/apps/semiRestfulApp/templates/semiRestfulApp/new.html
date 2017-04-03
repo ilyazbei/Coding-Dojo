@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial scale = 1">
+    <title>Create a new product</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'courseApp/css/styles.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="well">
+        <div class="row">
+          <div class="col-md-6">
+            <form class="form-horizontal" action="{% url 'semiRestfulApp:newPost' %}" method="POST">
+              {% csrf_token %}
+              <fieldset>
+                <div id="legend">
+                  <legend class="">Add a new product</legend>
+                </div>
+
+                <div class="control-group">
+                  <!-- First Name -->
+                  <label class="control-label">Name</label>
+                  <div class="controls">
+                    <input type="text" id="name" name="name" class="input-xlarge">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <!-- Last Name -->
+                  <label class="control-label"  for="description">Description</label>
+                  <div class="controls">
+                    <input type="text" id="description" name="description" placeholder="" class="input-xlarge">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <!-- E-mail -->
+                  <label class="control-label" for="price">Price</label>
+                  <div class="controls">
+                    <input type="text" id="price" name="price" placeholder="" class="input-xlarge">
+                  </div>
+                </div><br>
+                <div class="control-group">
+                  <!-- Button -->
+                  <div class="controls">
+                    <button class="btn btn-primary">Create</button>
+                  </div>
+                </div><br>
+                <h4><a href="{% url 'semiRestfulApp:index' %}">Go Back</a></h4>
+              </fieldset>
+            </form>
+          </div><!-- col-md6 ends here for Login-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+		</div> <!-- container 1 ends here -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

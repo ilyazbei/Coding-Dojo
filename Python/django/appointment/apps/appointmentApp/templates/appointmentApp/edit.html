@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial scale = 1">
+		<title>What's Up</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'loginApp/css/styles.css' %}">
+	</head>
+	<body>
+    <div class="container">
+      <div class="well">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-8 col-sm-offset-8 col-xs-offset-8">
+            <form class="" action="{% url 'users:logout' %}" method="post">
+              {% csrf_token %}
+              <input class="btn btn-primary" type="submit" name="submit" value="Logout">
+            </form>
+          </div><br><br>
+          <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-8 col-sm-offset-8 col-xs-offset-8">
+            <form class="" action="{% url 'appointments:index' %}" method="post">
+              {% csrf_token %}
+              <input class="btn btn-primary" type="submit" name="submit" value="Dashboard">
+            </form>
+          </div>
+          <div class="col-md-7 col-sm-7 col-xs-7">
+            <div class="errorMessage">
+              {% if messages %}
+                {% for message in messages %}
+                  <p>{{ message }}</p>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div><br><br><br><br>
+          <div class="col-md-7 col-sm-7 col-xs-7">
+            <form class="form-horizontal" action="{% url 'appointments:addAppt' %}" method="POST">
+              {% csrf_token %}
+              <div class="control-group">
+                <!-- Content -->
+                Date: <input type="date" name="date" value=""><br><br>
+                Time: <input type="time" name="time" value=""><br><br>
+                Tasks: <input type="text" name="task" value=""><br><br>
+                <div class="controls col-lg-1 col-md-1 col-sm-1 col-xs-2 col-lg-offset-2 col-md-offset-3 col-sm-offset-4 col-xs-offset-5">
+                  <button class="btn btn-primary">Update</button>
+                </div>
+              </div>
+            </form>
+          </div> <!-- col-md-7 ends here -->
+        </div> <!-- Row ends here -->
+      </div> <!-- Well ends here -->
+    </div> <!-- Container ends here -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
+<!-- //////////////////// -->

@@ -1,0 +1,18 @@
+*{
+  outline: 1px dotted red;
+}
+div{
+  border: 1px solid black;
+}
+.col-md-3{
+  margin: 10px;
+  border: 0px;
+  text-align: right;
+
+}
+p{
+  display: none;
+}
+/*.contact{
+  display: none;
+}*/

@@ -1,0 +1,40 @@
+/**{
+  border: 1px dotted red;
+}*/
+#wrapper{
+  margin: 0px auto;
+  width: 476px;
+  background-color: grey;
+}
+table {
+  background-color: rgb(201, 206, 57);
+  border: 1px solid black;
+  border-spacing: 30px;
+  border-collapse: separate;
+}
+/*th{
+  padding: 10px;
+}
+td{
+  padding: 10px;
+}*/
+table tr th{
+  margin-left: 40px;
+}
+#wrapper h1{
+  width: 256px;
+  /*display: inline-block;*/
+  /*margin-top: 100px;
+  margin-left: 350px;*/
+  border-bottom: 2px solid gray;
+}
+#form1{
+  line-height: 150%;
+  padding: 3px;
+  height: 200px;
+  width: 250px;
+  text-align: right;
+  display: inline-block;
+  /*margin-left: 350px;*/
+  /*margin: 150px 0px 50px 280px;*/
+}

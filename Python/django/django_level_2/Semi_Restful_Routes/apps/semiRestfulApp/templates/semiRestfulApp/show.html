@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial scale = 1">
+    <title>Product {{ product.id }} Info</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'courseApp/css/styles.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="well">
+        <div class="row">
+          <div class="col-md-12">
+            <form class="" action="{% url 'semiRestfulApp:update' id=product.id %}" method="POST">
+              {% csrf_token %}
+            </form>
+            <legend class="">Product {{ product.id }}</legend>
+            <p>Name: {{ product.name }}</p>
+            <p>Description: {{ product.description }}"</p>
+            <p>Price: ${{ product.price }}</p>
+            <div class="col-md-1">
+              <h4><a href="{% url 'semiRestfulApp:edit' id=product.id %}">Edit</a></h4>
+            </div>
+            <div class="col-md-1">
+              <h4><a href="{% url 'semiRestfulApp:index' %}">Back</a></h4>
+            </div>
+            <fieldset>
+            </fieldset>
+          </div><!-- col-md6 ends here for Login-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+		</div> <!-- container 1 ends here -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

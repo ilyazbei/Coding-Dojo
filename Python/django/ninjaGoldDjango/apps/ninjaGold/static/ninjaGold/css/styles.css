@@ -1,0 +1,35 @@
+.yourgold{
+  margin-top: 20px;
+  display: inline-block;
+
+}
+.currentGoldAmount{
+  padding-left: 5px;
+  margin-left: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  height: 20px;
+  border: 2px solid black;
+}
+.findGold{
+  margin-bottom: 20px;
+}
+.border{
+  text-align: center;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+.activities{
+  padding: 5px;
+  overflow: scroll;
+  height: 200px;
+  border: 2px solid black;
+}
+.green{
+  color: green;
+}
+.red{
+  red: red;
+}

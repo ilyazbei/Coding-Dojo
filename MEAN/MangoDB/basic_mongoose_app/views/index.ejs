@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial scale = 1">
+		<title>User Registration</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{% static 'loginApp/css/styles.css' %}">
+	</head>
+	<body>
+		<div class="container">
+      <div class="well">
+        <div class="row">
+          <div class="col-md-7">
+            <form class="form-horizontal" action="/users" method="post">
+              <fieldset>
+                <div id="legend">
+                  <legend class="">Register Here</legend>
+                </div>
+                <div class="control-group">
+                  <label class="control-label"  for="name">Name</label>
+									<input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+                </div><br>
+
+                <div class="control-group">
+                  <label class="control-label"  for="age">Age</label>
+									<input type="text" id="age" name="age" placeholder="" class="input-xlarge">
+                </div><br>
+
+                <hr>
+                <div class="control-group">
+                  <div class="controls">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form><!-- Form ends here-->
+          </div><!-- col-md-7 ends here for Registration-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+		</div> <!-- container 1 ends here -->
+
+		<div class="container">
+      <div class="well">
+        <div class="row">
+          <div class="col-md-7">
+						<fieldset>
+							<div id="legend">
+								<legend class="">Registered Users</legend>
+							</div>
+							<%for(user in users){%>
+								<div class="control-group">
+									<label class="control-label"  for="name">Name: </label> <%= users[user].name %>
+								</div><br>
+
+								<div class="control-group">
+									<label class="control-label"  for="age">Age: </label> <%= users[user].age %>
+								</div><hr>
+							<%}%>
+						</fieldset>
+          </div><!-- col-md-7 ends here for Registration-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+		</div> <!-- container 1 ends here -->
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
+<!-- ///////////////////////// -->

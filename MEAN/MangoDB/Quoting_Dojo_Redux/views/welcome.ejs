@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial scale = 1">
+		<title>New</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+      <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <legend class="col-xs-10 col-sm-10 col-md-10 col-lg-10"><h1>Welcom to Quoting Dojo</h1></legend>
+        <form class="col-xs-1 col-sm-1 col-md-1 col-lg-1" action="/quotes" method="get">
+          <input class="btn btn-primary" type="submit" value="Skip to quotes!">
+        </form><!-- Get Form ends here-->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form class="form-horizontal" action="/quotes" method="post">
+              <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="weight" class="col-sm-2 control-label">Quote</label>
+                <div class="col-sm-6">
+                  <textarea class="form-control" name="quote" rows="8" cols="40"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-6">
+                  <button class="btn btn-primary" type="submit">Add my quote!</button>
+                </div>
+              </div>
+            </form><!-- Post Form ends here-->
+          </div><!-- col ends here for Registration-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+		</div> <!-- container 1 ends here -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>

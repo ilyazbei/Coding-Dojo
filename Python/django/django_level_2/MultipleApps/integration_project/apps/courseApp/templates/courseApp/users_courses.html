@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial scale = 1">
+    <title>Add a new Course</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'courseApp/css/styles.css' %}">
+  </head>
+  <body>
+    <div class="container buttons">
+      <form action="{% url 'course1:addUserToCourse' %}" method="post">
+      {% csrf_token %}
+        <div class="btn-group">
+          Users: <select name="user" class="btn-warning form-control input-md btn-select">
+            {% for user in usersList1 %}
+            <option value="{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="btn-group">
+          Courses: <select name="course" class="btn-warning form-control input-md">
+            {% for course in course1 %}
+            <option value="{{ course.id }}">{{ course.description }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <button class="btn btn-warning" type="submit">Add User To Course</button>
+      </form>
+    </div> <!-- First Container ends here -->
+    <div class="container">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Title</th>
+            <th>Number of Users</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for course in course1 %}
+            <tr>
+              <td>{{ course.name }}</td>
+              <td>{{ course.description }}</td>
+              <td>{{ course.course_creator.count }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <form action="{% url 'course1:courseIndex' %}" method="post">
+      {% csrf_token %}
+        <button class="btn btn-warning" type="submit">Return Home</button>
+      </form>
+    </div> <!-- Second Container ends here -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

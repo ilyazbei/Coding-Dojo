@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial scale = 1">
+		<title>Index</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+      <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <fieldset>
+              <div id="legend">
+                <legend class="">Welcome to Animals Page!</legend>
+              </div>
+              <label class="control-label"><a href="/new">Create new Animal</a></label><hr>
+              <% for (idx in animals) { %>
+                <table class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Type of animals</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><label class="control-label"><a href="/<%= animals[idx]._id %>/show"><%= animals[idx].type %></a></label></td>
+                      <td>
+                        <form class="col-sm-2 col-md-2 col-lg-2" action="/<%= animals[idx]._id %>/edit/" method="get">
+                          <input class="btn btn-warning" type="submit" value="Edit Animal">
+                        </form><!-- Form ends here-->
+                        <form class="col-sm-2 col-md-2 col-lg-2" action="/<%= animals[idx]._id %>/delete/" method="post">
+                          <input class="btn btn-danger" type="submit" value="Delete">
+                        </form><!-- Form ends here-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              <% } %>
+            </fieldset>
+          </div><!-- col-md-7 ends here for Registration-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+		</div> <!-- container 1 ends here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

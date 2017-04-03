@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninjas</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'ninjas/css/styles.css' %}">
+  </head>
+  <body>
+    <img src="{% static ""|add:picture %}" alt="allTurtles">
+  </body>
+</html>

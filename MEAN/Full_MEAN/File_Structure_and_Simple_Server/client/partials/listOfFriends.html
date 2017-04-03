@@ -1,0 +1,39 @@
+<div ng-controller="newController" class="container">
+  <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <legend class="">Friends List</legend>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Show</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="friend in NC.friends">
+                <td>{{ friend.firstName }} {{ friend.lastName }}</td>
+                <td><a href="#!/show/{{friend._id}}">Show</a></td>
+          			<td><a href="#!/edit/{{friend._id}}">Edit</a></td>
+          			<td><a href="#" ng-click="delete(friend._id)">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- col-md-6 ends here for Registration-->
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <legend class="">Filter Friends List</legend>
+        <input ng-model="filter_birthDay" placeholder="Filter: By Birthday!" class="form-control">
+        <ul ng-repeat="friend in friends | filter:filter_birthDay " >
+          <li >
+            {{ friend.birthDay | date:'mediumDate' }}
+          </li>
+          <li>{{friend.firstName}}</li>
+        </ul>
+      </div>
+    </div><!-- Row ends here-->
+  </div><!-- well ends here-->
+</div> <!-- container 1 ends here -->

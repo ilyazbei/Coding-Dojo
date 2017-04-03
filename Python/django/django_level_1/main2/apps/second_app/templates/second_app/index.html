@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    {% load staticfiles %}
+    <!-- referancing CSS -->
+    <link rel="stylesheet" href="{% static 'secind_app/css/styles.css' %}">
+    <!-- referancing JS -->
+    <script src="{% static 'second_app/js/name.js' %}" ></script>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    {{email}} and {{name}}
+  </body>
+</html>

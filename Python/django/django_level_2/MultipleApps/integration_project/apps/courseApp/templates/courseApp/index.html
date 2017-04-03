@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial scale = 1">
+    <title>Add a new Course</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'courseApp/css/styles.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+          <form class="form1" action="{% url 'course1:courses2' %}" method="post">
+            <h4>Add a new course</h4>
+            {% csrf_token %}
+            Course: <input class="courseName" type="text" name="name" placeholder="Course"><br>
+            <br>Title: <textarea name="description" rows="4" cols="30"></textarea><br>
+            <input class="button" type="submit" value="Add">
+          </form><br>
+        </div>
+      </div>
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Title</th>
+            <th>Date Added</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for course in courses %}
+            <tr>
+              <td>{{ course.name }}</td>
+              <td>{{ course.description }}</td>
+              <td>{{ course.created_at }}</td>
+              <td><a href="{% url 'course1:destroy1' id=course.id %}">remove</a></td>
+            </tr>
+					{% endfor %}
+        </tbody>
+      </table>
+    <h4><a href="{% url 'course1:userCourse1' %}">Add Users to Course</a></h4>
+
+    </div> <!-- Container ends here -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

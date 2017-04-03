@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial scale = 1">
+		<title>Edit</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+      <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <legend class="">Edit your: <%= animal.type %>!</legend>
+            <form class="form-horizontal" action="/<%= animal.id %>" method="post">
+              <div class="form-group">
+                <label for="type" class="col-sm-2 control-label">Type</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="type" value="<%= animal.type %>">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="name" value="<%= animal.name %>">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="weight" class="col-sm-2 control-label">Weight</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="weight" value="<%= animal.weight %>">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="color" class="col-sm-2 control-label">Color</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="color" value="<%= animal.color %>">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-6">
+                  <button class="btn btn-warning" type="submit">Edit this animal!</button>
+                </div>
+              </div>
+            </form><!-- Form ends here-->
+            <form class="" action="/" method="get">
+              <input class="btn btn-primary" type="submit" value="Home">
+            </form>
+          </div><!-- col-md-7 ends here for Registration-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+		</div> <!-- container 1 ends here -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>

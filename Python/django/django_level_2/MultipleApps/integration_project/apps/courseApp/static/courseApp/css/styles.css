@@ -1,0 +1,10 @@
+.table{
+  border: 3px solid black;
+}
+.YES{
+  background-color: red;
+}
+.buttons{
+  margin-top:  20px;
+  margin-bottom:  20px;
+}

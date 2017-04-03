@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial scale = 1">
+		<title>Email Validation</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'validateApp/css/styles.css' %}">
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="row">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#" id="logo">DefactoPro</a>
+            </div>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home<span style="font-size:16px; margin-left: 10px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home left-padding-10"></span></a></li>
+                <li><a href="#">Link 1</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items <span style="padding-left:10px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span><span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">View Items</a></li>
+                    <li><a href="#">Add Items</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div> <!-- collaps ends here -->
+          </div> <!-- container fluid ends here -->
+        </nav> <!-- nav bar ends here -->
+			</div> <!-- row ends here -->
+		</div> <!-- container 1 ends here -->
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>

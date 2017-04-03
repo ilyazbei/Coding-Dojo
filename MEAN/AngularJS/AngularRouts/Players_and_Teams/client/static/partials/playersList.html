@@ -1,0 +1,40 @@
+<div ng-controller="PlayersController">
+	<div class="container">
+    <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+          <form name="playerForm" ng-submit="addPlayer()" class="form-inline">
+            <div class="form-group">
+              <label>Name</label>
+              <input name="name" ng-model="newPlayer.name" minlength="4" type="text" class="form-control">
+            </div>
+            <button class="btn btn-primary" type="submit">Add Player</button>
+          </form><!-- Form ends here-->
+					<div class="alert alert-danger" ng-messages="playerForm.name.$error">
+				      <p ng-message="minlength">The player name is too short blah.</p>
+				      <p ng-message="required">The player name is required.</p>
+				  </div>
+          <br><hr>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Name</th>
+                <th class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Actions</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="player in players | orderBy: 'name'">
+              <tr>
+                <td>{{ player.name }}</td>
+                <td>
+                  <button class="btn btn-primary" ng-click="removePlayer(player)">Remove Player</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- col-md-7 ends here for Registration-->
+      </div><!-- Row ends here-->
+    </div><!-- well ends here-->
+	</div> <!-- container 1 ends here -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</div>

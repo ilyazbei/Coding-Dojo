@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='personApp'>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <title></title>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    var person_app = angular.module('personApp', [])
+
+    person_app.factory('PersonFactory', function($http){
+      var factory = {};
+      factory.index = function(callback){
+        $http.get('/names').success(function(output){
+          callback(output)
+        })
+      }
+      factory.addPerson = function(newPerson,callback){
+        $http.get('/new/' + newPerson.name + '/').success(function(output){
+          callback();
+        })
+      }
+      factory.deletePerson = function(person,callback){
+        $http.get('/remove/' + person + '/').success(function(output){
+          callback();
+        })
+      }
+      return factory;
+    })
+    person_app.controller('PersonsController', function($scope, PersonFactory){
+      $scope.index = function(){
+        PersonFactory.index(function(data){
+          $scope.persons = data;
+        })
+      }
+      $scope.index();
+      $scope.addPerson = function(){
+        PersonFactory.addPerson($scope.newPerson, function(){
+          $scope.index();
+        })
+      }
+      $scope.deletePerson = function(person){
+        PersonFactory.deletePerson(person, function(){
+          $scope.index();
+        })
+      }
+    })
+  </script>
+</head>
+<body ng-controller="PersonsController">
+  <h1>1955 People</h1>
+  <ul>
+    <li ng-repeat="person in persons">{{person.name}}<button ng-click="deletePerson(person.name)">Delete</button></li>
+  </ul>
+  <form>
+    <h2>Add Person</h2>
+    <p>
+      Person Name:
+      <input type="text" ng-model="newPerson.name">
+      <input type="submit" value="Add" ng-click="addPerson()">
+    </p>
+  </form>
+</body>
+</html>

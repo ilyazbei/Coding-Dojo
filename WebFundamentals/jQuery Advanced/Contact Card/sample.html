@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOTSTRAP DEMO</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
+  <style>
+    .person {
+      border: 1px solid #ccc;
+      width: 300px;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .person p {
+      display: none;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+  <div class="container">
+
+  </div>
+
+
+  <script>
+    $('.container').append(`
+      <div class="person">
+        <h1>A Person</h1>
+        <a class="description-toggle">Show Description</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, numquam.<p>
+      </div>
+    `)
+    $('.container').append(`
+      <div class="person">
+        <h1>Lady Gaga</h1>
+        <a class="description-toggle">Show Description</a>
+        <p>HELLO THERE<p>
+      </div>
+    `)
+    $('.container').append(`
+      <div class="person">
+        <h1>Tom Brady</h1>
+        <a class="description-toggle">Show Description</a>
+        <p>GOODBYE<p>
+      </div>
+    `)
+    $('.container').append(`
+      <div class="person">
+        <h1>Matt</h1>
+        <a class="description-toggle">Show Description</a>
+        <p>CODING DOJO<p>
+      </div>
+    `)
+
+
+    $('a').click(function() {
+      var $this = $(this)
+      var $parent = $this.parent()
+      var desc = $parent.children('p').text()
+      $parent.html(desc)
+    })
+
+  </script>
+
+</body>
+</html>

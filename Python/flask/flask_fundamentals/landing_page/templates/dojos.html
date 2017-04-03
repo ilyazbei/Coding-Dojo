@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='css/landing_style_sheet.css')}}">
+  </head>
+  <body>
+    <h1>This is a Dojo form page</h1>
+    <form class="form1" action="">
+            First name: <input class="first" type="text"><br>
+            Last name: <input class="last" type="text"><br>
+            Description: <textarea class="description" name="description" rows="4" cols="30" placeholder="Enter description:"></textarea><br>
+            <input type="submit" value="Add User">
+    </form>
+  </body>
+</html>

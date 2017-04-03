@@ -1,0 +1,43 @@
+<title>Login and Registration</title>
+<div ng-controller = "userController" class="container">
+  <div class="well col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form ng-model = "regUser" ng-submit = "login()" class="form-horizontal">
+          <fieldset>
+            <legend class="">Registration/Login</legend>
+
+            <!-- Validation error fieled -->
+            <div ng-if="error" class="alert alert-danger ">
+              <p>{{ error }}</p>
+            </div>
+
+            <div class="control-group">
+              <!-- First Name -->
+              <label class="control-label">User Name</label>
+              <div class="controls">
+                <input ng-model="user.name" type="text" class="form-control input-xlarge">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <!-- E-mail -->
+              <label class="control-label">E-mail</label>
+              <div class="controls">
+                <input ng-model="user.email" type="email" class="form-control input-xlarge" placeholder="me@example.com">
+                <p class="help-block">Please provide your E-mail</p>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <!-- Button -->
+              <div class="controls">
+                <button class="btn btn-primary">Login/Register</button>
+              </div>
+            </div>
+          </fieldset>
+        </form><!-- Form ends here-->
+      </div><!-- col-md6 ends here for Registration-->
+    </div><!-- Row ends here-->
+  </div><!-- well ends here-->
+</div> <!-- container 1 ends here -->

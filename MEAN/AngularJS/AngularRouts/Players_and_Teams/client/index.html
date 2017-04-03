@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src = 'angular/angular.js'></script>
+    <script src = 'angular-route/angular-route.js'></script>
+    <script src = 'angular-messages/angular-messages.js'></script>
+    <!--We load all our modularized javascript files-->
+    <script src="./js/config/routes.js"></script>
+    <script src="./js/factories/playerFactory.js"></script>
+    <script src="./js/factories/teamFactory.js"></script>
+    <script src="./js/controllers/playersController.js"></script>
+    <script src="./js/controllers/teamsController.js"></script>
+    <script src="./js/controllers/associationsController.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <a href="#!/players" class="btn btn-primary btn-lg active" role="button">Players</a>
+            <a href="#!/teams" class="btn btn-primary btn-lg active" role="button">Teams</a>
+            <a href="#!/associations" class="btn btn-primary btn-lg active" role="button">Associations</a>
+          </div><!-- col-md-7 ends here for Registration-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+  	</div> <!-- container 1 ends here -->
+    <div ng-view=""></div>
+  </body>
+</html>

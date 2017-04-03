@@ -1,0 +1,13 @@
+.container1{
+  padding: 10px;
+}
+.greenS{
+  background-color: lightgreen;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px 100px;
+}
+.errorRED{
+  padding: 2px;
+  background-color: red;
+}

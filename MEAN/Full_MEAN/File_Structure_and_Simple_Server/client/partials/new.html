@@ -1,0 +1,60 @@
+<!-- attach an ng-model and an ng-submit to the forms -->
+<div class="container">
+  <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <legend class="">Create Friends!</legend>
+        <form ng-submit="NC.create()" class="form-horizontal">
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label">First Name</label>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+              <input ng-model="NC.newFriend.firstName" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label">Last Name</label>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+              <input ng-model="NC.newFriend.lastName" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label">Birthday</label>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+              <input ng-model="NC.newFriend.birthDay" type="date" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="from-group col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 col-xs-1 col-sm-1 col-md-1 col-lg-1">
+              <button class="btn btn-primary" type="submit">Create</button>
+            </div>
+          </div>
+        </form><!-- Form ends here-->
+      </div><!-- col-md-6 ends here for Registration-->
+    </div><!-- Row ends here-->
+  </div><!-- well ends here-->
+</div> <!-- container 1 ends here -->
+
+
+<table id = "friends_table">
+  <thead>
+    <tr>
+      <td>Name: </td>
+      <td>Birth Day: </td>
+    </tr>
+  </thead>
+  <tr ng-repeat = "friend in NC.friends">
+    <td>This is printing here - {{friend.firstName}} {{friend.lastName}}</td>
+    <td>{{friend.birthDay | date:'mediumDate' }}</td>
+    <td><a href="/friends/{{friend._id}}">Show</a> <a href="#/edit/{{friend._id}}">Edit</a></td>
+  </tr>
+</table>
+<!-- show created user below -->
+<div ng-if="NC.createdFriend" style="border: 1px solid blue; padding: 10px; margin: 5px;">
+  <h2>A new friend was created!</h2>
+  <h3>_id:</h3>
+  <p ng-bind="NC.createdFriend._id"></p>
+  <h3>First Name:</h3>
+  <p ng-bind="NC.createdFriend.firstName"></p>
+  <h3>Last Name:</h3>
+  <p ng-bind="NC.createdFriend.lastName"></p>
+</div>

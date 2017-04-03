@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width = device-width, initial scale = 1">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="angular/angular.js"></script>
+  <script>
+    var app = angular.module('MyApp', []);
+    app.controller('ninjaController', function() {
+      this.ninjas = [
+        { name: "Ilyaz", favLanguage: "JavaScript"},
+        { name: "Vasya", favLanguage: "Python"},
+        { name: "Taylor", favLanguage: "C#"},
+        { name: "Paul", favLanguage: "iOS"},
+      ];
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <legend class="">Coding Dojo Ninja List</legend>
+          <legend class="">Style 1</legend>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Favorite Language</th>
+              </tr>
+            </thead>
+            <tbody ng-controller="ninjaController as ninjaCtrl">
+              <tr ng-repeat="ninja in ninjaCtrl.ninjas">
+                <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">{{ ninja.name }}</td>
+                <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6">{{ ninja.favLanguage }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- col-md-7 ends here for Registration-->
+      </div><!-- Row ends here-->
+    </div><!-- well ends here-->
+  </div> <!-- container 1 ends here -->
+  <div class="container">
+    <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <legend class="">Coding Dojo Ninja List</legend>
+          <legend class="">Style 2</legend>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Favorite Language</th>
+              </tr>
+            </thead>
+            <tbody ng-controller="ninjaController as ninjaCtrl">
+              <tr ng-repeat="ninja in ninjaCtrl.ninjas">
+                <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span ng-bind="ninja.name"></span></td>
+                <td class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><span ng-bind="ninja.favLanguage"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- col-md-7 ends here for Registration-->
+      </div><!-- Row ends here-->
+    </div><!-- well ends here-->
+  </div> <!-- container 1 ends here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
