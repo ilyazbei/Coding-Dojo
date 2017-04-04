@@ -1,0 +1,8 @@
+/Users/ilyaz/codingDojo/dotnet/cs_fund_2/bin/Debug/netcoreapp1.1/cs_fund_2.deps.json
+/Users/ilyaz/codingDojo/dotnet/cs_fund_2/bin/Debug/netcoreapp1.1/cs_fund_2.runtimeconfig.json
+/Users/ilyaz/codingDojo/dotnet/cs_fund_2/bin/Debug/netcoreapp1.1/cs_fund_2.runtimeconfig.dev.json
+/Users/ilyaz/codingDojo/dotnet/cs_fund_2/bin/Debug/netcoreapp1.1/cs_fund_2.dll
+/Users/ilyaz/codingDojo/dotnet/cs_fund_2/bin/Debug/netcoreapp1.1/cs_fund_2.pdb
+/Users/ilyaz/codingDojo/dotnet/cs_fund_2/obj/Debug/netcoreapp1.1/cs_fund_2.AssemblyInfo.cs
+/Users/ilyaz/codingDojo/dotnet/cs_fund_2/obj/Debug/netcoreapp1.1/cs_fund_2.dll
+/Users/ilyaz/codingDojo/dotnet/cs_fund_2/obj/Debug/netcoreapp1.1/cs_fund_2.pdb
