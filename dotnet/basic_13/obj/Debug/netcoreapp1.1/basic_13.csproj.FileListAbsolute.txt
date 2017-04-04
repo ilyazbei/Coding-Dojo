@@ -1,0 +1,8 @@
+/Users/ilyaz/codingDojo/dotnet/basic_13/bin/Debug/netcoreapp1.1/basic_13.deps.json
+/Users/ilyaz/codingDojo/dotnet/basic_13/bin/Debug/netcoreapp1.1/basic_13.runtimeconfig.json
+/Users/ilyaz/codingDojo/dotnet/basic_13/bin/Debug/netcoreapp1.1/basic_13.runtimeconfig.dev.json
+/Users/ilyaz/codingDojo/dotnet/basic_13/obj/Debug/netcoreapp1.1/basic_13.AssemblyInfo.cs
+/Users/ilyaz/codingDojo/dotnet/basic_13/bin/Debug/netcoreapp1.1/basic_13.dll
+/Users/ilyaz/codingDojo/dotnet/basic_13/bin/Debug/netcoreapp1.1/basic_13.pdb
+/Users/ilyaz/codingDojo/dotnet/basic_13/obj/Debug/netcoreapp1.1/basic_13.dll
+/Users/ilyaz/codingDojo/dotnet/basic_13/obj/Debug/netcoreapp1.1/basic_13.pdb
