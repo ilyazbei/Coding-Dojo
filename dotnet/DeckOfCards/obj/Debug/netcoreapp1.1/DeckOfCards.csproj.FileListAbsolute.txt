@@ -1,0 +1,8 @@
+/Users/ilyaz/codingDojo/dotnet/DeckOfCards/bin/Debug/netcoreapp1.1/DeckOfCards.deps.json
+/Users/ilyaz/codingDojo/dotnet/DeckOfCards/bin/Debug/netcoreapp1.1/DeckOfCards.runtimeconfig.json
+/Users/ilyaz/codingDojo/dotnet/DeckOfCards/bin/Debug/netcoreapp1.1/DeckOfCards.runtimeconfig.dev.json
+/Users/ilyaz/codingDojo/dotnet/DeckOfCards/bin/Debug/netcoreapp1.1/DeckOfCards.dll
+/Users/ilyaz/codingDojo/dotnet/DeckOfCards/bin/Debug/netcoreapp1.1/DeckOfCards.pdb
+/Users/ilyaz/codingDojo/dotnet/DeckOfCards/obj/Debug/netcoreapp1.1/DeckOfCards.AssemblyInfo.cs
+/Users/ilyaz/codingDojo/dotnet/DeckOfCards/obj/Debug/netcoreapp1.1/DeckOfCards.dll
+/Users/ilyaz/codingDojo/dotnet/DeckOfCards/obj/Debug/netcoreapp1.1/DeckOfCards.pdb
