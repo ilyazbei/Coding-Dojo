@@ -6,28 +6,39 @@ namespace basic_13
     {
         public static void Main(string[] args)
         {
-            print_1_to_255();
+            print_1_to_255(255);
+            Console.WriteLine(" // End of all numbers 1-255");
             print_odd_1_to_255();
             printSum_1_255();
             int[] whatevere = {1,3,5,7,9,13};
             arrayIterate(whatevere);
         }
         // Prints values 1 through 255 to the console
-        public static void print_1_to_255()
+        public static void print_1_to_255(int val)
         {
-            for(int val = 1; val <= 255; val++)
+            for(int i = 1; i <= val; i++)
             {
-                Console.WriteLine(val);
+                if(i == val)
+                {
+                    Console.Write(i);
+                }
+                else
+                {
+                    Console.Write(i + ", ");
+
+                }
+            
             }
-            Console.WriteLine("// End of all numbers 1-255");
+            // Console.WriteLine(" // End of all numbers 1-255");
         }
+        
         // Print odd numbers between 1-255
         public static void print_odd_1_to_255()
         {
             for(int val = 1; val <= 255; val++)
             {
                 if(val % 2 == 1){
-                    Console.WriteLine(val);
+                    Console.Write(val + ", ");
                 }
             }
             Console.WriteLine("// End of all odd numbers 1-255");
@@ -53,7 +64,8 @@ namespace basic_13
                 output += arr[idx] + ", ";
             }
             output += "]";
-            Console.WriteLine(output);
+            Console.Write(output);
+            Console.WriteLine("// End of iterate");
 
         }
 

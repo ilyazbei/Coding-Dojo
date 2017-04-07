@@ -21,6 +21,7 @@ namespace BlackJack
             Eli.Discard(6);
 
             Console.WriteLine(Eli.Hand);
+            Console.ReadLine(Eli.Hand);
 
             // Player Ivan = new Player("Ivan");
             

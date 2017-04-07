@@ -1,0 +1,8 @@
+/Users/ilyaz/codingDojo/dotnet/Wizard_Ninja_Samurai/bin/Debug/netcoreapp1.1/Wizard_Ninja_Samurai.deps.json
+/Users/ilyaz/codingDojo/dotnet/Wizard_Ninja_Samurai/bin/Debug/netcoreapp1.1/Wizard_Ninja_Samurai.runtimeconfig.json
+/Users/ilyaz/codingDojo/dotnet/Wizard_Ninja_Samurai/bin/Debug/netcoreapp1.1/Wizard_Ninja_Samurai.runtimeconfig.dev.json
+/Users/ilyaz/codingDojo/dotnet/Wizard_Ninja_Samurai/bin/Debug/netcoreapp1.1/Wizard_Ninja_Samurai.dll
+/Users/ilyaz/codingDojo/dotnet/Wizard_Ninja_Samurai/bin/Debug/netcoreapp1.1/Wizard_Ninja_Samurai.pdb
+/Users/ilyaz/codingDojo/dotnet/Wizard_Ninja_Samurai/obj/Debug/netcoreapp1.1/Wizard_Ninja_Samurai.AssemblyInfo.cs
+/Users/ilyaz/codingDojo/dotnet/Wizard_Ninja_Samurai/obj/Debug/netcoreapp1.1/Wizard_Ninja_Samurai.dll
+/Users/ilyaz/codingDojo/dotnet/Wizard_Ninja_Samurai/obj/Debug/netcoreapp1.1/Wizard_Ninja_Samurai.pdb
