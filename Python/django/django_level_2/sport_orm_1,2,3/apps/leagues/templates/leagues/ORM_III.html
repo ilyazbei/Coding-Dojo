@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial scale = 1">
+		<title>Sports Leagues ORM III</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'leagues/css/styles.css' %}">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{% url 'users:index' %}" id="logo">Sports ORM I</a>
+              <a class="navbar-brand" href="{% url 'users:orm2' %}" id="logo">Sports ORM II</a>
+              <a class="navbar-brand" href="{% url 'users:orm3' %}" id="logo">Sports ORM III</a>
+            </div>
+          </div> <!-- container fluid ends here -->
+        </nav> <!-- nav bar ends here -->
+			</div> <!-- row ends here -->
+			<div class="row container4">
+
+        <div class="col-md-2">
+          <h4>All players, sorted by the number of teams they've played for</h4>
+          <ol>
+            {% for player in QUESTION_7 %}
+            <li>{{player.first_name}} {{player.last_name}}</li>
+            {% empty %}
+            <p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+            {% endfor %}
+          </ol>
+        </div>
+
+        <div class="col-md-2">
+					<h4>All teams that Samuel Evans has played with</h4>
+					<ol>
+						{% for team in Samuel_Teams %}
+						<li>{{team.location}} {{team.team_name}}</li>
+						{% empty %}
+						<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+						{% endfor %}
+					</ol>
+				</div>
+
+        <div class="col-md-2">
+					<h4>All Players played with Manitoba</h4>
+					<ol>
+						{% for player in players_Manitoba %}
+						<li>{{player.first_name}} {{player.last_name}}</li>
+						{% empty %}
+						<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+						{% endfor %}
+					</ol>
+				</div>
+
+        <div class="col-md-2">
+					<h4>All former players of Wichita Vikings</h4>
+					<ol>
+						{% for player in playersFormerly %}
+						<li>{{player.first_name}} {{player.last_name}}</li>
+						{% empty %}
+						<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+						{% endfor %}
+					</ol>
+				</div>
+
+        <div class="col-md-2">
+					<h4>Every team that Jacob Gray played, before starting at Oregon Colts</h4>
+					<ol>
+						{% for team in jacob_beforeColts %}
+						<li>{{team.location}} {{team.team_name}}</li>
+						{% empty %}
+						<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+						{% endfor %}
+					</ol>
+				</div>
+
+        <div class="col-md-2">
+          <h4>All "Joshua" who has ever played in the Atlantic Federation of Amateur Baseball Players</h4>
+          <ol>
+            {% for player in QUESTION_5 %}
+            <li>{{player.first_name}} {{player.last_name}}</li>
+            {% empty %}
+            <p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+            {% endfor %}
+          </ol>
+        </div>
+
+        <div class="col-md-2">
+					<h4>All teams that had 12 players all time</h4>
+					<ol>
+						{% for team in QUESTION_6 %}
+						<li>{{team.location}} {{team.team_name}}</li>
+						{% empty %}
+						<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+						{% endfor %}
+					</ol>
+				</div>
+
+		</div> <!-- container  ends here -->
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
