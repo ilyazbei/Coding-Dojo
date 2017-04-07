@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial scale = 1">
+		<title>Survey Form</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{% static 'loginApp/css/styles.css' %}">
+	</head>
+	<body>
+		<div class="container">
+      <div class="well">
+        <div class="row">
+          <div class="col-md-7">
+            <form class="form-horizontal" action="/result" method="post">
+              <fieldset>
+                <div id="legend">
+                  <legend class="">Survey Form</legend>
+                </div>
+                <div class="control-group">
+                  <label class="control-label"  for="name">Name</label>
+									<input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+                </div><br>
+
+                <div class="control-group">
+                  <label class="control-label"  for="name">Dojo Location</label>
+                  <select class="control-form" name="location">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Bellevue">Bellevue</option>
+                    <option value="Dalas">Dalas</option>
+                  </select>
+                </div><br>
+
+                <div class="control-group">
+                  <label class="control-label"  for="name">Favorite Language</label>
+                  <select class="control-form" name="language">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="MEAN">MEAN</option>
+                    <option value="Node">Node</option>
+                  </select>
+                </div>
+
+                <div class="control-group">
+                  <label class="control-label"  for="name">Comment (optional)</label>
+                  <textarea class="control-textarea" name="comment" rows="8" cols="80"></textarea>
+                </div>
+
+                <hr>
+                <div class="control-group">
+                  <div class="controls">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form><!-- Form ends here-->
+          </div><!-- col-md6 ends here for Registration-->
+        </div><!-- Row ends here-->
+      </div><!-- well ends here-->
+		</div> <!-- container 1 ends here -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
+<!-- ///////////////////////// -->
