@@ -6,12 +6,15 @@ namespace basic_13
     {
         public static void Main(string[] args)
         {
-            print_1_to_255(255);
-            Console.WriteLine(" // End of all numbers 1-255");
-            print_odd_1_to_255();
-            printSum_1_255();
-            int[] whatevere = {1,3,5,7,9,13};
-            arrayIterate(whatevere);
+            // print_1_to_255(255);
+            // Console.WriteLine(" // End of all numbers 1-255");
+            // print_odd_1_to_255();
+            // printSum_1_255();
+            // int[] whatevere = {1,3,5,7,9,13};
+            // arrayIterate(whatevere);
+            int[] myArr = {-8,-3,10,5,9};
+            MaxInArray(myArr);
+            AvgOfArray(myArr);
         }
         // Prints values 1 through 255 to the console
         public static void print_1_to_255(int val)
@@ -67,6 +70,36 @@ namespace basic_13
             Console.Write(output);
             Console.WriteLine("// End of iterate");
 
+        }
+
+        //Find max value in an array
+        public static void MaxInArray(int[] arr)
+        {
+            int max = arr[0];
+            foreach(int val in arr)
+            {
+                if(val > max)
+                {
+                    max = val;
+                }
+            }
+            Console.WriteLine("The max value is {0}", max);
+        }
+
+        // Get average value of an array
+        public static void AvgOfArray(int[] arr)
+        {
+            int sum = GetSum(arr);
+            Console.WriteLine("This average is " + (double)sum/(double)arr.Length);
+        }
+        public static int GetSum(int[] arr)
+        {
+            int sum = 0;
+            for(int num = 0; num < arr.Length; num++)
+            {
+                sum += arr[num]; //sum = sum + num
+            }
+            return sum;
         }
 
     }
