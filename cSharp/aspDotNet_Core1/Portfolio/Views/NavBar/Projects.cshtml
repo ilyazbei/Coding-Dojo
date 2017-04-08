@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Index</title>
+        <!--In this context '~' refers to the wwwroot folder-->
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <!--The Project page should have at least 3 Projects listed each with a Title, Image , and small description-->
+        <ul class="UL">
+            <li class="LI"><a href="/">Home</a></li>
+            <li class="LI"><a class="active" href="/projects">Projects</a></li>
+            <li class="LI"><a href="/contact">Contact</a></li>
+        </ul>
+        <div id="aboutMe">
+            <h4>Little bit about my projects:</h4>
+            <div id="project">
+                <img srcset="~/img/code.jpg" alt="My default image" width="200px"><p id="project">Iam learning how to code</p>
+            </div>
+            <div id="project">
+                <img srcset="~/img/cSharp.jpg" alt="My default image" width="200px"><p id="project">My favorite language is C#</p>
+            </div>
+            <div id="project">
+                <img srcset="~/img/dojo.jpg" alt="My default image" width="200px"><p id="project">I enjoy learning at the Coding Dojo</p>
+            </div>
+        </div> 
+    </body>
+</html>
