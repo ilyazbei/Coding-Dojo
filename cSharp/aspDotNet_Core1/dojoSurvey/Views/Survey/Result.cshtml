@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dojo Survey Result</title>
+        <link rel="stylesheet" type="text/css" href="~/css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    </head>
+    <body>
+        <div class="box-div">
+            <h3 class="underline">Submitted Info</h3>
+            <div class="inline-div">
+                <p>Name:</p>
+                <p>Dojo Location:</p>
+                <p>Favorite Language:</p>
+                <p>Comment:</p>
+            </div>
+            <div class="inline-div">
+                <p>@ViewBag.Name</p>
+                <p>@ViewBag.Location</p>
+                <p>@ViewBag.Language</p>
+                <p>@ViewBag.Comment</p>
+            </div><br><br>
+            <div class="ui left aligned container">
+                <a href="/"><button class="ui button blue" type="submit">Go Back</button></a>
+            </div>
+            
+        </div>
+    </body>
+</html>

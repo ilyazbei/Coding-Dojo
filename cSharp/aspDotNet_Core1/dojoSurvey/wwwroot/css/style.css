@@ -1,0 +1,19 @@
+.box-div{
+    border: .04em solid black;
+    padding: 1em;
+    margin: auto;
+    width: 50%;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.red{
+    color: red;
+}
+
+.inline-div{
+    display: inline-block;
+    vertical-align: top;
+}
