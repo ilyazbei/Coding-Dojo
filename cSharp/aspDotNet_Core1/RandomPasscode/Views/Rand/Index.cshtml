@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Random Passcode Genrator</title>
+        <link rel="stylesheet" type="text/css" href="~/css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    </head>
+    <body>
+        <div class="ui center aligned container">
+            <br><br>
+            <h3 class="">Random passcode (pascode# @ViewBag.RunCount)</h3>
+            <div class="box-div">
+                <h1>@ViewBag.RandPassword</h1>
+            </div><br><br>
+            <div class="">
+                <a href="/"><button class="ui button blue">Generate</button></a>
+            </div>
+            <br><br>
+            <form action="/clear" method="Post">
+                <button type="submit" class="ui button blue">Clear Session</button></a>
+            </form>
+            
+        </div>
+    </body>
+</html>
