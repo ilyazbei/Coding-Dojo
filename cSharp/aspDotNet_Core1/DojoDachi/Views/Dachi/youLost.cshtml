@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DojoDachi</title>
+        <link rel="stylesheet" type="text/css" href="~/css/style.css">
+        <link rel="icon" type="image/png" href="~/img/NINJA.png">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+
+    </head>
+    <body>
+        <div class="ui center aligned container">
+            <br><br>
+            <h4><pre>Fullness: @ViewBag.Fullness   Happiness: @ViewBag.Happiness   Meals: @ViewBag.Meals   Energy: @ViewBag.Energy</pre></h4>
+            <div class="box-div">
+                <img srcset="~/img/minion-RIP.jpg" alt="My default image" width="200px">
+                <h4>SHAME Your Minion has passed away... </h4>
+                <h4>And your Minion turned in to Zombi and its going to eat your brain</h4>
+            </div><br>
+            <form action="/restart" method="Post">
+                <button type="submit" class="ui button inverted orange">Restart?</button>
+            </form>
+        </div>
+    </body>
+</html>
