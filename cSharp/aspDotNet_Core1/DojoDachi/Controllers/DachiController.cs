@@ -153,7 +153,7 @@ namespace DojoDachi.Controllers
                 int randMealAmount = Rand.Next(1,4);
                 Meals += randMealAmount;
                 Reaction = " :) it feels good to work hard and earn my Meal";
-                Message = " - It is good to work but it is tiring so i just lost " + randMealAmount + " from energy";
+                Message = " - It is good to work but it is tiring so i just lost 5 points from energy but gainde " + randMealAmount + " to our meal section!";
             } else {
                 Reaction = " :( Iam tired";
                 Message = " - Yor Minion have no energy to Work! You must put him to sleep";

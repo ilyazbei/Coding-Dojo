@@ -1,0 +1,9 @@
+/*Write all of your CSS here*/
+li {
+	list-style-type: none;
+    
+}
+
+h1{
+    color: red;
+}
