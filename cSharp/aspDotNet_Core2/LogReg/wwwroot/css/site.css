@@ -1,0 +1,12 @@
+/*Write all of your CSS here*/
+legend{
+    font-size: 30px;
+    color: blue;
+}
+h1{
+    color: red;
+}
+#CENTER{
+    float: none;
+    margin: 0 auto;
+}
