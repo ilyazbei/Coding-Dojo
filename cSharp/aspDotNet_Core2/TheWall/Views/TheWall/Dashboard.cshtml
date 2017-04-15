@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-7"><h3>Coding Dojo Wall</h3></div>
+        <div class="col-sm-3"><h3>Welcome @ViewBag.CurUser["First_Name"]!</h3></div>
+        <div class="col-sm-2"><h3><a href="/logout"><button class="btn btn-primary">Logout</button></a></h3></div>
+    </div>
+</div><hr>
+<div id="CENTER" class="container col-sm-10">
+    <div class="well col-sm-12">
+        <!--Post a message Form-->
+        <form action="postMessage" method="post">
+    
+            <!--TempData Error for session-->
+            @if( @ViewBag.MesErrors != null) {
+                <p class="alert alert-danger">@ViewBag.MesErrors</p>
+            }
+
+            <div class="form-group">
+                <label for="inputMessage3" type="email" class="control-label">Post a message</label>
+                <textarea name="message" class="form-control" id="inputMessage3" cols="30" rows="5"></textarea>  
+            </div>
+            <button class="btn btn-primary col-sm-offset-10 col-sm-2" type="submit">Post a message</button>
+            
+        </form>
+
+        <div>
+            
+            
+            
+            @foreach(var message in @ViewBag.allMessages) {
+                <label>@message["message_author"] posted a message on @message["created_at"]</label>
+                <p class="col-sm-offset-1 col-sm-11"> @message["message"]</p>
+                <div>
+                    <!---->
+                    @foreach(var comment in @ViewBag.allComments) {
+                        if(@comment["messages_idmessages"] == @message["idmessages"]) {
+                            <label class="col-sm-offset-1 col-sm-11">@ViewBag.CurUser["First_Name"] @ViewBag.CurUser["Last_Name"] posted a commented on @comment["created_at"]</label>
+                            <p class="col-sm-offset-2 col-sm-10">@comment["comment"]</p>
+                        }
+                    }
+
+                    <form class="col-sm-offset-1 col-sm-11" action="postComment/@message["idmessages"]" method="post">
+                
+                        <div class="form-group">
+                            <label for="inputComment3" type="email" class="control-label">Post a comment</label>
+                            <textarea name="comment" class="form-control" id="inputComment3" cols="30" rows="2"></textarea>  
+                        </div>
+                        <button class="btn btn-primary col-sm-offset-10 col-sm-2" type="submit">Post a comment</button>
+                        
+                    </form>
+
+
+
+                </div>
+            }
+            
+        </div>
+
+    </div>
+</div>

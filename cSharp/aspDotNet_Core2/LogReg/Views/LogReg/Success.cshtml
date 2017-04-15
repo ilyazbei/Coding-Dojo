@@ -1,8 +1,11 @@
-
+@{
+    ViewData["Title"] = "Home Page";
+}
 
 <div id="CENTER" class="container col-sm-6">
     <div class="well">
         <legend>Successfully Registered!</legend>
         <h1>Hello @ViewBag.CurUser["First_Name"]</h1>
+        <a href="logout"><button class="btn btn-primary">Logout</button></a>
     </div>
 </div>

@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using LogReg.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-// using LogReg.Connectors;
 
 namespace LogReg.Controllers
 {
@@ -22,11 +21,7 @@ namespace LogReg.Controllers
         [Route("")]
         public IActionResult Index()
         {
-            ViewBag.LogErrors = new List<string>();
-            ViewBag.sesErrors = TempData["sesErrors"];
-            // ViewBag.Log1Errors = new List<string>();
-            // ViewBag.Log1Errors = "";
-            
+            ViewBag.sesErrors = TempData["sesErrors"]; 
             return View();
         }
         // Post: /Register/
@@ -38,28 +33,22 @@ namespace LogReg.Controllers
             Dictionary<string, object> MyUser = _dbConnector.Query(query).SingleOrDefault();
 
             if(MyUser != null) {
-                List<string> ERROR = new List<string>();
-                ERROR.Add("This email is exist");
-                ViewBag.LogErrors = ERROR;
+                ViewBag.RegErrors = "This email is exist";
                 return View("Index");
             } 
 
             if(ModelState.IsValid) {
                 string query2 = $"INSERT INTO LogReg (First_Name, Last_Name, Email, Password, created_at, updated_at) VALUES ('{NewUser.First_Name}', '{NewUser.Last_Name}', '{NewUser.Email}', '{NewUser.Password}', NOW(), NOW() )";
                 _dbConnector.Execute(query2);
-                ViewBag.LogErrors = new List<string>();
-
 
                 string query1 = $"SELECT * FROM LogReg WHERE Email = '{NewUser.Email}'";
                 Dictionary<string, object> CurUser = _dbConnector.Query(query1).SingleOrDefault();
                 // set user in session
                 HttpContext.Session.SetInt32("CurUserId", (int)CurUser["idLogReg"]);
 
-
-                return RedirectToAction("Success");
+                return RedirectToAction("Dashboard", "TheWall");
 
             } else {
-                ViewBag.LogErrors = new List<string>();
                 return View("Index");
             }
         }
@@ -72,45 +61,23 @@ namespace LogReg.Controllers
 
             if(MyUser != null ) {
                 if(Password == null) {
-                    List<string> ERROR1 = new List<string>();
-                    ERROR1.Add("You forgot to enter you Password");
-                    ViewBag.LogErrors = ERROR1;
+                    ViewBag.LogErrors = "You forgot to enter you Password";
                     return View("Index");
                 }
                 else if((string)MyUser["Password"] == Password ) {
                     
                     // set user in session
                     HttpContext.Session.SetInt32("CurUserId", (int)MyUser["idLogReg"]);
-                    return RedirectToAction("Success");
-                } else {   
-                    List<string> ERROR2 = new List<string>();
-                    ERROR2.Add("Invalid Password");
-                    ViewBag.LogErrors = ERROR2;
+                    return RedirectToAction("Dashboard", "TheWall");
+                } else {
+                    ViewBag.LogErrors = "Invalid Password";
                     return View("Index");
                 }
-            } 
-            List<string> ERROR = new List<string>();
-            ERROR.Add("This email dose not exist , please register");
-            ViewBag.LogErrors = ERROR;
+            }
+            ViewBag.LogErrors = "This email dose not exist , please register";
             return View("Index");                        
         }
-        // Get: /Success/
-        [HttpGet]
-        [Route("success")]
-        public IActionResult Success() {
-            System.Console.WriteLine("hi");
-            if(HttpContext.Session.GetInt32("CurUserId") == null ) {
-                string Error = "Dont try to steal my cookies";
-                TempData["sesErrors"] = Error;
-                return RedirectToAction("Index");
-            } else { 
-                int? UserId = HttpContext.Session.GetInt32("CurUserId");
-                string query = $"SELECT * FROM LogReg WHERE idLogReg = '{UserId}'";
-                Dictionary<string, object> CurUser = _dbConnector.Query(query).SingleOrDefault();
-                ViewBag.CurUser = CurUser;
-                return View();
-            }
-        }
+        
         // Get: /Log Out/
         [HttpGet]
         [Route("logout")]
