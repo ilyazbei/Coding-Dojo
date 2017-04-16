@@ -10,7 +10,7 @@
     <div class="row">
 
         <div class="col-sm-7"><h3>Coding Dojo Wall</h3></div>
-        <div class="col-sm-3"><h3>Welcome @ViewBag.CurUser["First_Name"]!</h3></div>
+        <div class="col-sm-3"><h3>Welcome <span id="NAME">@ViewBag.CurUser["First_Name"]</span>!</h3></div>
         <div class="col-sm-2"><h3><a href="/logout"><button class="btn btn-primary">Logout</button></a></h3></div>
     </div>
 </div><hr>
@@ -37,13 +37,13 @@
             
             
             @foreach(var message in @ViewBag.allMessages) {
-                <label>@message["message_author"] posted a message on @message["created_at"]</label>
+                <label><span id="NAME">@message["message_author"]</span> posted a message on @message["created_at"]</label>
                 <p class="col-sm-offset-1 col-sm-11"> @message["message"]</p>
                 <div>
-                    <!---->
+                    <!--comment for each messag-->
                     @foreach(var comment in @ViewBag.allComments) {
                         if(@comment["messages_idmessages"] == @message["idmessages"]) {
-                            <label class="col-sm-offset-1 col-sm-11">@ViewBag.CurUser["First_Name"] @ViewBag.CurUser["Last_Name"] posted a commented on @comment["created_at"]</label>
+                            <label class="col-sm-offset-1 col-sm-11"><span id="NAME">@comment["comment_author"]</span> posted a commented on @comment["created_at"]</label>
                             <p class="col-sm-offset-2 col-sm-10">@comment["comment"]</p>
                         }
                     }
