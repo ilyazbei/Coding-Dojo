@@ -43,7 +43,7 @@ namespace LogReg.Controllers
                 foreach (var message in allMessages)
                 {
                     // using SystemExtensions.cs
-                    message["created_at"] = ((DateTime)message["created_at"]).ToString("dddd, dnn MMMM yyyy hh:mm:ss tt", true);//example time: 6:00:00 PM
+                    message["created_at"] = ((DateTime)message["created_at"]).ToString("dddd, dnn MMMM yyyy 'at' hh:mm:ss tt", true);//example time: 6:00:00 PM
                     // System.Console.WriteLine("********************************");
                     // System.Console.WriteLine(((DateTime)message["created_at"]).ToString("dddd, dnn MMMM yyyy", true));
                     // System.Console.WriteLine("********************************");
@@ -54,7 +54,7 @@ namespace LogReg.Controllers
                 List<Dictionary<string, object>> allComments = _dbConnector.Query(ShowCom).ToList();
                 foreach (var comment in allComments)
                 {
-                    comment["created_at"] = ((DateTime)comment["created_at"]).ToString("dddd, dnn MMMM yyyy H:mm:ss", true);//example time in military : 18:00:00 
+                    comment["created_at"] = ((DateTime)comment["created_at"]).ToString("dddd, dnn MMMM yyyy 'at' H:mm:ss", true);//example time in military : 18:00:00 
                 }
                 ViewBag.allComments = allComments;
                

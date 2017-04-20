@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model RESTauranter.Models.Reviews
+
+<div id="CENTER" class="container col-sm-6">
+    <div class="well col-sm-12">
+        <!--Errors from Models-->
+        @if (!Html.ViewData.ModelState.IsValid )
+        {
+            <div class="alert alert-danger" asp-validation-summary="All"></div>
+        }
+        <!--Error for Date-->
+        @{
+            if(@ViewBag.dateError != null )
+            {   
+                <p class="alert alert-danger">@ViewBag.dateError</p>
+            }
+
+        }
+
+        <legend>Write a new Review</legend>
+        <form action="Create" method="POST">
+            <div class="row">
+                <div class="form-group col-sm-10">
+                    <label for="ReviewerName" class="control-label">Reviewer Name</label>
+                    <input name="Reviewer_Name" type="text" id="ReviewerName" class="form-control"> 
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="Stars">Stars</label>
+                    <select name="stars" class="form-control" id="Stars">
+                        <option ></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-10">
+                    <label for="RestaurantName" class="control-label">Restaurant Name</label>
+                    <input name="Restaurant_Name" type="text" id="RestaurantName" class="form-control"> 
+                </div>
+                <div class="form-group col-sm-10">
+                    <label for="Review" class="control-label">Review</label>
+                    <textarea name="Review" class="form-control" id="Review" cols="30" rows="5"></textarea> 
+                </div>
+               
+                <div class="form-group col-sm-10">
+                    <label for="DateOfVisit" class="control-label">Date of visit</label>
+                    <input name="Date_Of_Visit" type="date" id="DateOfVisit" class="form-control"> 
+                </div>
+                
+                <button class="btn btn-info col-sm-offset-10 col-sm-2" type="submit">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+</div>

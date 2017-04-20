@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="CENTER" class="container col-sm-6">
+    <div class="well col-sm-12">
+        @foreach( var review in @ViewBag.AllReviews ) {
+            <ul>
+                <li><span>This Review was added on @review.created_at.ToString("dddd, d MMMM yyyy hh:mm:ss tt")</span></li>
+                <li><label>Review for: @review.Restaurant_Name &nbsp &nbsp &nbsp @review.stars star</label></li>
+                <li><label>Reviewer:<span> @review.Reviewer_Name</span>, @review.Date_Of_Visit.ToString("MMM d yyyy")</label></li>
+                <li id="REV">@review.Review</li><hr>
+            </ul>
+        }
+    </div>
+</div>

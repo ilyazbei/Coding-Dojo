@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div id="MARGIN" class="container col-sm-9">
+    <div class="well col-sm-12">
+        <div class="row">
+            <legend> &nbsp Add A New Trail!<a id="GoBack" href="/Trails"><button class="btn btn-primary">Go Back</button></a></legend>
+        </div>
+        
+        <!--Errors from Models-->
+        @{
+        if(@ViewBag.RegErrors == null ) {
+
+
+                if (!Html.ViewData.ModelState.IsValid )
+                {
+                    <div class="alert alert-danger" asp-validation-summary="All"></div>
+                }
+            }
+        }
+        
+        <form action="Create" method="POST">
+            <div class="form-group">
+                <label for="TrailName" class="control-label">Trail Name</label>
+                <input name="trail_name" type="text" id="TrailName" class="form-control"> 
+            </div>
+            <div class="form-group">
+                <label for="Description" class="control-label">Description</label>
+                <textarea name="description" class="form-control" id="Description" cols="30" rows="5"></textarea> 
+            </div>
+            <div class="form-group">
+                <label for="TrailLength" class="control-label">Trail Length</label>
+                <input name="trail_length" type="number" id="TrailLength" class="form-control"> 
+            </div>
+            <div class="form-group">
+                <label for="ElevationChange" class="control-label">Elevation Change</label>
+                <input name="elevation_change" type="number" id="ElevationChange" class="form-control"> 
+            </div>
+            <div class="form-group">
+                <label for="Longitude" class="control-label">Latitude & Longitude</label>
+                <input name="latitude" type="text" class="form-control"> 
+                <input name="longitude" type="text" id="Longitude" class="form-control"> 
+            </div>
+
+            <button class="btn btn-info col-sm-offset-10 col-sm-2" type="submit">Create Record!</button>
+            
+        </form>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,23 @@
+/*Write all of your CSS here*/
+legend{
+    font-size: 30px;
+    color: blue;
+}
+h1{
+    color: red;
+}
+#CENTER{
+    float: none;
+    margin: 0 auto;
+}
+#NAME{
+    color: blue;
+}
+#MARGIN{
+    float: none;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+#GoBack{
+    margin-left: 480px;
+}

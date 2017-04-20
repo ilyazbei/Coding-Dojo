@@ -1,0 +1,35 @@
+/*Write all of your CSS here*/
+legend{
+    font-size: 30px;
+    color: blue;
+}
+#CENTER{
+    float: none;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#NAME{
+    color: blue;
+}
+li {
+	list-style-type: none;
+    
+}
+span{
+    color: blue;
+}
+hr {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: dimgrey ;
+    color: dimgrey ;
+    border: solid 2px dimgrey ;
+    
+}
+#REV{
+    margin-left: 50px;
+}
+body{
+    background-image: url("/images/background.jpg");
+    /*background-color: #cccccc;*/
+}

@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-7"><h3>Lost in the Wooeds</h3></div>
+        <div class="col-sm-3"><h3>Welcome <span id="NAME">@ViewBag.CurUser["first_name"]</span>!</h3></div>
+        <div class="col-sm-2"><h3><a href="/logout"><button class="btn btn-primary">Logout</button></a></h3></div>
+    </div>
+</div><hr>
+<div id="CENTER" class="container col-sm-9">
+    <div class="well col-sm-12">
+        <legend>List of local hiking trails</legend>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Trail Name</th>
+                    <th>Trail Length</th>
+                    <th>Elevation Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var trails in @ViewBag.allTrails) {
+                    <tr>                        
+                        <th>@trails["trail_name"]</th>
+                        <th>@trails["trail_length"]</th>
+                        <th>@trails["elevation_change"]</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a class="col-sm-offset-10 col-sm-2" href="/NewTrail"><button class="btn btn-info">Add New Trail</button></a>
+    </div>
+</div>
