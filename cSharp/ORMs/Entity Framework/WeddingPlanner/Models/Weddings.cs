@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WeddingPlanner.Models
@@ -16,12 +17,16 @@ namespace WeddingPlanner.Models
 
         public string weddingAddress { get; set; }
 
-        // public int UsersUserId { get; set; }
-        // public Users User { get; set; }
+        public int UsersUserId { get; set; }
+        public Users UsersUser { get; set; }
+
+        public List<RSVPs> Guests { get; set; }
 
 
-        public Weddings() : base() {
-            
+        public Weddings() : base() 
+        {
+            Guests = new List<RSVPs>();
         }
     }
 }
+

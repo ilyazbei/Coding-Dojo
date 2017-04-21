@@ -14,7 +14,7 @@ namespace WeddingPlanner.Models
         public string wedderTwo { get; set; }
         
         [Required(ErrorMessage="Date is Required")]
-        public DateTime date { get; set; }
+        public DateTime? date { get; set; }
         
         [Required(ErrorMessage="Wedding Address is Required")]
         public string weddingAddress { get; set; }

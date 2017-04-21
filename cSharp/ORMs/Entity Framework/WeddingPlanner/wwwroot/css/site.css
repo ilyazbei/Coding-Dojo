@@ -11,6 +11,9 @@ body{
     margin: 0 auto;
     margin-top: 50px;
 }
+#CENTER1{
+    color: green;
+}
 
 span{
 	color: red;
@@ -18,7 +21,9 @@ span{
 h3{
 	color: white;
 }
-
+spa{
+	color: blue;
+}
 
 
 

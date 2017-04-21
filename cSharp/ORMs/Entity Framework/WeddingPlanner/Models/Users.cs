@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WeddingPlanner.Models
@@ -11,9 +12,12 @@ namespace WeddingPlanner.Models
         public string email { get; set; }
         public string password { get; set; }
 
+        public List<RSVPs> RSVPs { get; set; }
+         
 
-        public Users() : base() {
-            
+        public Users() : base() 
+        {
+           RSVPs = new List<RSVPs>();
         }
     }
 }

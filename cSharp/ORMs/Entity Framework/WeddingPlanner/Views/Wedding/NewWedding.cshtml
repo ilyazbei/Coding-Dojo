@@ -16,12 +16,16 @@
 <div id="CENTER" class="container col-sm-6">
     <div class="well">
         <!--Errors from Models-->
+        @if(@ViewBag.dateError != null)
+        {
+            <p class="alert alert-danger">@ViewBag.dateError</p>
+        }
 
         @if (!Html.ViewData.ModelState.IsValid )
         {
             <div class="alert alert-danger" asp-validation-summary="All"></div>
         }
-        
+
         <form action="Create" method="POST" class="form-horizontal">
             <legend>Plan Your Wedding</legend>
             <div class="form-group">
@@ -39,7 +43,7 @@
             <div class="form-group">
                 <label for="Date" class="col-sm-3 control-label">Date</label>
                 <div class="col-sm-8">
-                    <input name="date" type="date" id="Date" class="form-control"/>
+                    <input name="date" type="datetime-local" id="Date" class="form-control"/>
                 </div>
             </div>
             <div class="form-group">
