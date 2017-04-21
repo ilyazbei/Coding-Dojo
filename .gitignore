@@ -1,4 +1,4 @@
 *.zip
 *.pyc
-*.appsettings.json
+appsettings.json
 Python/myEnvironments/
