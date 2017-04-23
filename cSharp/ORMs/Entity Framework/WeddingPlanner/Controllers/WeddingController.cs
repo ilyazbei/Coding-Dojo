@@ -104,6 +104,7 @@ namespace WeddingPlanner.Controllers
 
                 Weddings createdId = _context.Weddings.Where(x => x.wedderOne == model.wedderOne).Where( s => s.wedderTwo == model.wedderTwo).SingleOrDefault();
                 int WEDid = createdId.WeddingId;
+                ViewBag.WEDid = WEDid;
                 RSVPs newRSVP = new RSVPs
                 {
                     UsersUserId = (int)HttpContext.Session.GetInt32("CurUserId"),
@@ -116,7 +117,11 @@ namespace WeddingPlanner.Controllers
                 int? currUserId = HttpContext.Session.GetInt32("CurUserId");
                 Users CurUser = _context.Users.SingleOrDefault( user => user.UserId == currUserId );
 
-                return RedirectToAction("Dashboard");
+                System.Console.WriteLine("**************");
+                System.Console.WriteLine($"Info/{WEDid}");
+                System.Console.WriteLine("**************");
+                // return RedirectToRoute($"Info/{WEDid}");
+                return RedirectToAction("Info", new {wedID=WEDid});
 
             } else {
 
@@ -180,6 +185,7 @@ namespace WeddingPlanner.Controllers
         [Route("Info/{wedID}")]
         public IActionResult Info( int wedID )
         {
+            System.Console.WriteLine("we are in the INFO $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
             if(HttpContext.Session.GetInt32("CurUserId") == null ) {
                 string Error = "Dont try to steal my cookies";
                 TempData["sesErrors"] = Error;
@@ -187,7 +193,8 @@ namespace WeddingPlanner.Controllers
                 return RedirectToAction("Index", "User");
 
             } else {
-
+                System.Console.WriteLine("we are in the INFO $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+                
                 int? currUserId = HttpContext.Session.GetInt32("CurUserId");
                 Users CurUser = _context.Users.SingleOrDefault( user => user.UserId == currUserId ); 
                 ViewBag.CurUser = CurUser;
